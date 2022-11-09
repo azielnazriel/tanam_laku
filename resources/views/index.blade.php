@@ -20,35 +20,41 @@
                 <a class="navbar-brand" href="#!">Tanam-Laku</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Sell</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <ul class="navbar-nav me-auto mb-1 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Tanaman</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Pengguna</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kategori</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#!">Dewasa</a></li>
+                                <li><a class="dropdown-item" href="#!">Benih</a></li>
+                                <li><a class="dropdown-item" href="#!">Bibit</a></li>
+                                <li><a class="dropdown-item" href="#!">Media Tanam</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
-                            Cart                                         
+                            Favorite                                         
                             <span class="badge bg-dark text-white ms-1 me-2 rounded-pill">0</span>
-                        </button>
-
-                        
-                    </form>     
-                    <form>
-                    <form>
-                        <div class="border border-dark p-1 ms-2 rounded">
-                            <i class="cart-fill me-1 font accordion-body" href="#!"> Login</i>
-                        </div>
+                        </button>                       
+                    </form>  
+                    <form class="d-flex">
+                    <div class="border  ms-2 rounded"> 
+                    <button class="btn btn-outline-dark" type="submit">
+                            Masuk                                         
+                        </button> 
+                    </div>              
                     </form>
+                    </form>  
+                    <form class="d-flex">
+                    <div class="border  ms-2 rounded"> 
+                    <button class="btn btn-outline-dark" type="submit">
+                            Daftar                                        
+                        </button> 
+                    </div> 
                 </div>
             </div>
         </nav>
@@ -274,7 +280,7 @@
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <!-- <div class="container"><p class="m-0 text-center text-white">Copyright &copy; BY Nazril 2022</p></div> -->
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; By Ideaforest 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
