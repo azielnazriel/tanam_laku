@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Marketplace-Tanaman </title>
+    <title>Marketplace Tanaman </title>
     <!-- Favicon-->
     <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
     <!-- Bootstrap icons-->
 
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -49,25 +49,24 @@
                         </ul>        
                     </li>
                      <!-- menu search -->
-            <div class="search-box">
+            <div id="search-box">
                  <input type="text" placeholder="Type to search...">
-                <div class="search-button">
+                <!-- <div id="search-button">
                     <i class="fas fa-search"></i>
-                </div>
-                <div class="cancel-button">
-                    <i class="fas fa-search"></i>
-                </div>
+                </div> -->
+                <!-- <div id="cancel-button">
+                    <i class="fas fa-times"></i>
+                </div> -->
             </div>
-
-                    <!-- <nav class="navbar bg-light">
-                        <div class="container-fluid">
-                            <form class="d-flex " role="search">
-                                <input class=" bi bi-search form-control me-2 " type="search" placeholder="Search" aria-label="Search" >
-                                <i class="bi bi-search"></i> -->
-                                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                            <!-- </form>
-                        </div>
-                    </nav> -->
+            <script>
+                const searchBtn = document.querySelector("#search-btn");
+                const cancelBtn = document.querySelector("#cancel-btn");
+                // const searchBtn = document.querySelector("#search-btn");
+                const search,box ; document.querySelector("#search-box");
+                searchBtn.onclick = () =>{
+                    searchBox.classList.add("active");
+                }
+            </script>
 
                 </ul>
                 <form class="d-flex">
@@ -90,14 +89,31 @@
         </div>
     </nav>
     <!-- Header-->
-    <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
+    <!-- <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5" id="nazril">         
+            <div class="text-center text-success">
                 <h1 class="display-4 fw-bolder">Belanja Tanaman Di Sini</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Cari Tanaman Yang Anda Inginkan</p>
+                <p class="lead fw-normal text-success-50 mb-0">Cari Tanaman Yang Anda Inginkan</p>
             </div>
         </div>
-    </header>
+    </header> -->
+
+    <section class="gambar">
+      <div class="slider-wripper">
+        <div class="slider">         
+           <img id="slider-1" src="/img/iklan.jpg" class="img-fluid"/>
+           <!-- <img id="slider-2" src="/img/iklan2.jpg" class="img-fluid"/>
+           <img id="slider-3" src="/img/iklan3.jpg" class="img-fluid"/>
+           <img id="slider-4" src="/img/iklan4.jpg" class="img-fluid"/> -->
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <!-- <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a> -->
+     </div>
+    </section>
+
     <!-- Section-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
