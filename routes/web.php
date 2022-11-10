@@ -18,3 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('tanam',TanamController::class);
+
+Route::get('/daftar', function () {
+    return view('daftar');
+});
