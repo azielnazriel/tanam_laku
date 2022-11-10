@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\TanamController;
+use App\Http\Controllers\BerandaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::resource('tanam',TanamController::class);
+Route::resource('/tanam',BerandaController::class);
+
