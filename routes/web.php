@@ -17,5 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+<<<<<<< HEAD
 Route::resource('/tanam',BerandaController::class);
 
+=======
+Route::resource('tanam',TanamController::class);
+
+Route::get('/daftar', function () {
+    return view('daftar');
+});
+>>>>>>> 80c03f69f49a1bc712c3efa48009beed5f872172
