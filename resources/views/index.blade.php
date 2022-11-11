@@ -46,35 +46,36 @@
                                 <hr class="dropdown-divider" />
                             </li>
                             <li><a class="dropdown-item" id="ketik" href="#!">Media Tanam</a></li>
-                        </ul>        
+                        </ul>
                     </li>
-                    
-                     <!-- menu search -->
-            <div id="search-box">
-                 <input type="text" list="input" placeholder="Type to search...">
-                     <datalist id="input">
-                        <option value="Anggrek">Anggrek</option>
-                        <option value="Bunga Matahari">Bunga Matahari</option>
-                        <option value="Janda Bolong">Janda Bolong</option>
-                        <option value="Nazril Ganteng">Nazril Ganteng</option>
-                        <option value="Nazril Baik">Nazril Baik</option>
-                     </datalist>
-                <!-- <div id="search-button">
+
+                    <!-- menu search -->
+                    <div id="search-box">
+                        <input type="text" list="input" placeholder="Type to search...">
+                        <datalist id="input">
+                            <option value="Anggrek">Anggrek</option>
+                            <option value="Bunga Matahari">Bunga Matahari</option>
+                            <option value="Janda Bolong">Janda Bolong</option>
+                            <option value="Nazril Ganteng">Nazril Ganteng</option>
+                            <option value="Nazril Baik">Nazril Baik</option>
+                        </datalist>
+                        <!-- <div id="search-button">
                     <i class="fas fa-search"></i>
                 </div> -->
-                <!-- <div id="cancel-button">
+                        <!-- <div id="cancel-button">
                     <i class="fas fa-times"></i>
                 </div> -->
-            </div>
-            <script>
-                const searchBtn = document.querySelector("#search-btn");
-                const cancelBtn = document.querySelector("#cancel-btn");
-                // const searchBtn = document.querySelector("#search-btn");
-                const search,box ; document.querySelector("#search-box");
-                searchBtn.onclick = () =>{
-                    searchBox.classList.add("active");
-                }
-            </script>
+                    </div>
+                    <script>
+                        const searchBtn = document.querySelector("#search-btn");
+                        const cancelBtn = document.querySelector("#cancel-btn");
+                        // const searchBtn = document.querySelector("#search-btn");
+                        const search, box;
+                        document.querySelector("#search-box");
+                        searchBtn.onclick = () => {
+                            searchBox.classList.add("active");
+                        }
+                    </script>
 
                 </ul>
                 <form class="d-flex">
@@ -115,19 +116,19 @@
     </header> -->
 
     <section class="gambar">
-      <div class="slider-wripper">
-        <div class="slider">
-           <img id="slider-1" src="/img/iklan.jpg" class="img-fluid"/>
-           <!-- <img id="slider-2" src="/img/iklan2.jpg" class="img-fluid w-100 gbr"/>
+        <div class="slider-wripper">
+            <div class="slider">
+                <img id="slider-1" src="/img/iklan.jpg" class="img-fluid" />
+                <!-- <img id="slider-2" src="/img/iklan2.jpg" class="img-fluid w-100 gbr"/>
            <img id="slider-3" src="/img/iklan3.jpg" class="img-fluid w-100 gbr"/>
            <img id="slider-4" src="/img/iklan4.jpg" class="img-fluid  w-100 gbr"/> -->
-        </div>
-        <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <!-- <a href="#slide-2"></a>
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <!-- <a href="#slide-2"></a>
             <a href="#slide-3"></a>
             <a href="#slide-4"></a> -->
-     </div>
+            </div>
     </section>
 
     <!-- Section-->

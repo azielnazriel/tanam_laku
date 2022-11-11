@@ -1,7 +1,7 @@
 @extends('layout.template')
-@section('konten')   
+@section('konten')
 <!-- START FORM -->
-<form action='{{ url('tanam/'.$data->id_tanam) }}'  method='post' enctype="multipart/form-data">
+<form action='{{ url('tanam/'.$data->id_tanam) }}' method='post' enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="my-3 p-3 bg-body rounded shadow-sm">
@@ -20,7 +20,7 @@
         <div class="mb-3 row">
             <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
             <div class="col-sm-10">
-                           
+
                 <input type="text" class="form-control" readonly name='harga' value="{{ $data->kategori }}" id="harga">
             </div>
         </div>
@@ -48,9 +48,9 @@
                 <input type="file" class="form-control" name='foto' value="{{ url('foto').'/'. $data->foto }}" id="foto">
             </div>
         </div>
-            <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">Simpan</button></div>
-        </div>
+        <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">Simpan</button></div>
+    </div>
     </div>
 </form>
-    <!-- AKHIR FORM -->
-    @endsection
+<!-- AKHIR FORM -->
+@endsection

@@ -6,30 +6,31 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\File;
 use App\Models\Tanaman;
+
 class TanamController extends Controller
 {
-//     /**
-//      * Display a listing of the resource.
-//      *
-//      * @return \Illuminate\Http\Response
-//      */
+    //     /**
+    //      * Display a listing of the resource.
+    //      *
+    //      * @return \Illuminate\Http\Response
+    //      */
     public function index(Request $Request)
     {
-//         $katakunci = $Request->katakunci;
-//         $baris = 1;
-//         if(strlen($katakunci)){
-// $data = tanam::where('id_tanam','like',"%$katakunci%")
-//     ->orWhere('nama_tanam','like',"%$katakunci%")
-//     ->orWhere('kategori','like',"%$katakunci%")
-//     ->orWhere('harga','like',"%$katakunci%")
-//     ->orWhere('stok','like',"%$katakunci%")
-//     ->orWhere('keterangan','like',"%$katakunci%")
-//     ->orWhere('foto','like',"%$katakunci%")
-//     ->paginate($baris);
-//         }else {
-//             $data = Tanaman::orderBy ('id_tanam','desc')->paginate($baris);
-//         }
-      
+        //         $katakunci = $Request->katakunci;
+        //         $baris = 1;
+        //         if(strlen($katakunci)){
+        // $data = tanam::where('id_tanam','like',"%$katakunci%")
+        //     ->orWhere('nama_tanam','like',"%$katakunci%")
+        //     ->orWhere('kategori','like',"%$katakunci%")
+        //     ->orWhere('harga','like',"%$katakunci%")
+        //     ->orWhere('stok','like',"%$katakunci%")
+        //     ->orWhere('keterangan','like',"%$katakunci%")
+        //     ->orWhere('foto','like',"%$katakunci%")
+        //     ->paginate($baris);
+        //         }else {
+        //             $data = Tanaman::orderBy ('id_tanam','desc')->paginate($baris);
+        //         }
+
         return view('Tanam.index', [
             'data' => Tanaman::orderBy('id_tanam', 'desc')->paginate(5)
         ]);
@@ -77,7 +78,7 @@ class TanamController extends Controller
             'keterangan.required' => 'keterangan belum ada',
             'foto.required' => 'Foto wajib diisi',
             'foto.mimes' => 'Foto hanya diperbolehkan JPG',
-        ]); 
+        ]);
 
 
         $foto_file = $request->file('foto');
@@ -106,7 +107,6 @@ class TanamController extends Controller
 
         Tanaman::create($data);
         return redirect()->to('tanam')->with('success', 'Berhasil menambahkan data');
-
     }
 
     /**
@@ -117,7 +117,7 @@ class TanamController extends Controller
      */
     public function show($id)
     {
-    //    
+        //    
     }
 
     /**
@@ -141,18 +141,18 @@ class TanamController extends Controller
     //  */
     public function update(Request $request, $id)
     {
-    //     $request->validate([
-    //         'judul' => 'required',
-    //         'penulis' => 'required',
-    //         'category' => 'required',
-           
+        //     $request->validate([
+        //         'judul' => 'required',
+        //         'penulis' => 'required',
+        //         'category' => 'required',
 
-    //     ], [
-    //         'judul.required' => 'Judul wajib diisi',
-    //         'penulis.required' => 'Penulis wajib diisi',
-    //         'category.required' => 'Cataegory wajib diisi',
-         
-    //     ]);
+
+        //     ], [
+        //         'judul.required' => 'Judul wajib diisi',
+        //         'penulis.required' => 'Penulis wajib diisi',
+        //         'category.required' => 'Cataegory wajib diisi',
+
+        //     ]);
         $data = [
             'id_tanam' => $request->id_tanam,
             'nama_tanam' => $request->nama_tanam,
@@ -175,7 +175,7 @@ class TanamController extends Controller
     public function destroy($id_tanam)
     {
         $data_foto = Tanaman::where('id_tanam', $id_tanam)->first();
-    File::delete(public_path('foto') . '/' . $data_foto->foto);
+        File::delete(public_path('foto') . '/' . $data_foto->foto);
 
         Tanaman::where('id_tanam', $id_tanam)->delete();
         return redirect()->to('tanam')->with('success', 'Berhasil menghapus  data');
