@@ -1,3 +1,8 @@
+ body{
+   background-color: #E9F1EB;
+ }
+
+
  #ketik{
     color: #468277;
     
@@ -11,8 +16,8 @@
     color: #0B6B1A;
  }
 #search-box{
-   height: 38px;
-   width: 251px;
+   height: 35px;
+   width: 220px;
    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 #search-box.active{
@@ -23,7 +28,7 @@
    height: 100%;
    width:100%;
    border: none;
-   /* outline: none; */
+   outline: none;
    background: #D9D9D9;
    font-size: 20;
    text-align: center;
@@ -57,6 +62,11 @@
     cursor: pointer;
 
 }
+
+/* .gbr{
+   overflow-y: hidden;
+   height: 500px;
+} */
 
 .slider-wripper{
    position: relative;
@@ -96,4 +106,28 @@
 }
 .slider-nav a:hover{
    opacity: 1;
+}
+
+#judul{
+   color: #0B6B1A;
+   text-align: center;
+   margin-bottom: 70px;
+   text-decoration: none;
+   text-underline-offset: none;
+}
+#gbr1{
+   margin-left: 10rem;
+   margin-bottom: 3rem;
+}
+
+#kamu{
+   justify-content: space-between;
+   /* height: auto;
+   border: 2px solid;
+   border-radius: 2px;
+   color: #468277;
+   border-radius: 10px;
+   margin-left: 2px;
+   margin-right: 2px;
+   text-align: center; */
 }

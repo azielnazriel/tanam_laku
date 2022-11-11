@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-Route::resource('tanam',TanamController::class);
+Route::resource('tanam', TanamController::class);
 
 Route::get('/daftar', function () {
     return view('daftar');
+});
+Route::get('/login', function () {
+    return view('login');
 });
