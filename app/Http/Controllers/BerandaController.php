@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tanaman;
 
-class TanamanController extends Controller
+class BerandaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class TanamanController extends Controller
      */
     public function index()
     {
-        //
+        return view('Tanam.index', [
+            'data' => Tanaman::latest()->get()
+        ]);
     }
 
     /**
@@ -23,7 +26,7 @@ class TanamanController extends Controller
      */
     public function create()
     {
-        //
+        return view("Tanam.create");
     }
 
     /**

@@ -14,11 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tanamen', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nama_tanaman');
+            $table->integer('id_tanam');
+            $table->unique('id_tanam');
+            $table->string('nama_tanam');
+            $table->string('kategori');
             $table->integer('harga');
             $table->integer('stok');
             $table->text('keterangan');
+            $table->string('foto');
             $table->timestamps();
         });
     }
