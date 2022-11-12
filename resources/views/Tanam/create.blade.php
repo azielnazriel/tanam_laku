@@ -1,5 +1,5 @@
 @extends('layout.template')
-@section('konten')   
+@section('konten')
 <!-- START FORM -->
 <form action='{{ url('tanam') }}' method='post' enctype="multipart/form-data">
     @csrf
@@ -7,7 +7,7 @@
         <div class="mb-3 row">
             <label for="id_tanam" class="col-sm-2 col-form-label">Id</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name='id_tanam' value="{{Session::get('id_tanam')}}" id="id_tanam">
+                <input type="number" class="form-control" name='id_tanam' value="{{Session::get('id_tanam')}}" id="id_tanam">
             </div>
         </div>
         <div class="mb-3 row">
@@ -52,10 +52,10 @@
                 <input type="file" class="form-control" name='foto' value="{{Session::get('foto')}}" id="foto">
             </div>
         </div>
-        <a href='{{url('tanam')}}' class="btn btn-danger">Kembali</a> 
+        <a href='{{url('tanam')}}' class="btn btn-danger">Kembali</a>
         <button type="submit" class="btn btn-primary" name="submit">Kirim</button>
     </div>
     </div>
 </form>
-    <!-- AKHIR FORM -->
-    @endsection
+<!-- AKHIR FORM -->
+@endsection

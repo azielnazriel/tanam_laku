@@ -162,7 +162,8 @@ class TanamController extends Controller
             'keterangan' => $request->keterangan,
             'foto' => $request->foto,
         ];
-        Tanaman::where('id_tanam', $request->id_tanam)->update($data);
+        $tanam = Tanaman::all()->where('id_tanam', $request->id_tanam)->first();
+        $tanam->update($request->except('submit')); //menghilangkan variable yg tidak diinginkan
         return redirect()->to('tanam')->with('success', 'Berhasil mengubah data');
     }
 
