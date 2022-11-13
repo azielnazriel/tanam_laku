@@ -88,13 +88,14 @@
                     <div id="search-box" class="me-2">
                         <input type="text" list="input" placeholder="Type to search...">
                         <datalist id="input">
-                            <option value="Nazril terbaik">Nazril terbaik </option>
+                            <option value="Bunga Mawar">Bunga Mawar </option>
                             <option value="Rama Gay">Rama Gay</option>
                             <option value="Anggrek">Anggrek</option>
                             <option value="Bunga Matahari">Bunga Matahari</option>
                             <option value="Janda Bolong">Janda Bolong</option>
-                            <option value="Nazril Ganteng">Nazril Ganteng</option>
-                            <option value="Nazril Baik">Nazril Baik</option>
+                            <option value="Follow IG azielnazriel_">Follow IG azielnazriel_</option>
+                            <option value="Follow IG bernardinoadi_">Follow IG bernardinoadi_</option>
+                            <option value="Follow IG ramaditya7">Follow IG ramaditya7</option>
                         </datalist>
                         <!-- <div id="search-button">
                     <i class="fas fa-search"></i>
@@ -123,7 +124,7 @@
                     </button>
                 </form>
 
-                <i class="ms-3 me-3 bi bi-bell"></i>
+                <i class="ms-3 me-3 bi bi-bell" style="color: #468277;"></i>
 
                 <div class="d-flex">
                     <button class="btn btn-outline-success me-2" id="kamu" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -134,7 +135,7 @@
                 </div>
                 <form class="d-flex">
                     <button class="btn btn-outline-success " id="kamu" type="submit">
-                        <i class="bi-cart-fill-success "></i>
+                        <i class="bi-cart-fill-success " href="/daftar"></i>
                         Daftar
                         <span class="badge bg-success text-white rounded-pill"></span>
                     </button>
@@ -237,7 +238,7 @@
                         <!-- Sale badge-->
                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <img class="card-img-top" src="/img...jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">

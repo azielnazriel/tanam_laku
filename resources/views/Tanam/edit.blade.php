@@ -1,6 +1,8 @@
 @extends('layout.template')
 @section('konten')
+<link href="/css/warna.css" rel="stylesheet" />
 <!-- START FORM -->
+<body>
 <form action='{{ url('tanam/'.$data->id_tanam) }}' method='post' enctype="multipart/form-data">
     @csrf
     @method('PUT')
@@ -21,7 +23,7 @@
             <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
             <div class="col-sm-10">
 
-                <input type="text" class="form-control" readonly name='harga' value="{{ $data->kategori }}" id="harga">
+                <input type="text" class="form-control" readonly name='kategori' value="{{ $data->kategori }}" id="kategori">
             </div>
         </div>
         <div class="mb-3 row">
@@ -48,9 +50,10 @@
                 <input type="file" class="form-control" name='foto' value="{{ url('foto').'/'. $data->foto }}" id="foto">
             </div>
         </div>
-        <div class="col-sm-10"><button type="submit" class="btn btn-primary" name="submit">Simpan</button></div>
+        <div class="col-sm-10"><button type="submit" class="btn btn-primary">Simpan</button></div>
     </div>
     </div>
 </form>
+</body>
 <!-- AKHIR FORM -->
 @endsection

@@ -1,6 +1,7 @@
 @extends('layout.template')
 @section('konten')
 <!-- START FORM -->
+<body>
 <form action='{{ url('tanam') }}' method='post' enctype="multipart/form-data">
     @csrf
     <div class="my-3 p-3 bg-body rounded shadow-sm">
@@ -57,5 +58,6 @@
     </div>
     </div>
 </form>
+</body>
 <!-- AKHIR FORM -->
 @endsection

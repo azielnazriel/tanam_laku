@@ -2,6 +2,8 @@
 
 
 @section('konten')
+<link href="/css/warna.css" rel="stylesheet" />
+<body>
 <div class="my-3 p-3 bg-body rounded shadow-sm">
     <!-- FORM PENCARIAN -->
     {{-- <div class="pb-3">
@@ -58,6 +60,7 @@
             <a href='{{ url('') }}' class="btn btn-danger">Kembali</a>
         </div>
 </div>
+</body>
 <!-- AKHIR DATA -->
 @endsection
     
