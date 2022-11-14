@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [BerandaController::class, 'index']);
 Route::resource('tanam', TanamController::class);
 
 Route::get('/daftar', function () {
