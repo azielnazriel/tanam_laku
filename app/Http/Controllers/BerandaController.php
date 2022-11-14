@@ -14,7 +14,7 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        return view('Tanam.index', [
+        return view('index', [
             'data' => Tanaman::latest()->get()
         ]);
     }
@@ -26,7 +26,6 @@ class BerandaController extends Controller
      */
     public function create()
     {
-        return view("Tanam.create");
     }
 
     /**
