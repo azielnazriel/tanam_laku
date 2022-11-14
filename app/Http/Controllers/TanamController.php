@@ -16,21 +16,6 @@ class TanamController extends Controller
     //      */
     public function index(Request $Request)
     {
-        //         $katakunci = $Request->katakunci;
-        //         $baris = 1;
-        //         if(strlen($katakunci)){
-        // $data = tanam::where('id_tanam','like',"%$katakunci%")
-        //     ->orWhere('nama_tanam','like',"%$katakunci%")
-        //     ->orWhere('kategori','like',"%$katakunci%")
-        //     ->orWhere('harga','like',"%$katakunci%")
-        //     ->orWhere('stok','like',"%$katakunci%")
-        //     ->orWhere('keterangan','like',"%$katakunci%")
-        //     ->orWhere('foto','like',"%$katakunci%")
-        //     ->paginate($baris);
-        //         }else {
-        //             $data = Tanaman::orderBy ('id_tanam','desc')->paginate($baris);
-        //         }
-
         return view('Tanam.index', [
             'data' => Tanaman::orderBy('id_tanam', 'desc')->paginate(5)
         ]);
@@ -55,6 +40,9 @@ class TanamController extends Controller
     public function store(Request $request)
     {
         Session::flash('id_tanam', $request->id_tanam);
+        Session::flash('nama', $request->nama);
+        Session::flash('no_tlpn', $request->no_tlpn);
+        Session::flash('alamat', $request->alamat);
         Session::flash('nama_tanam', $request->nama_tanam);
         Session::flash('kategori', $request->kategori);
         Session::flash('harga', $request->harga);
@@ -63,6 +51,9 @@ class TanamController extends Controller
 
         $request->validate([
             'id_tanam' => 'required|numeric|unique:tanamen,id_tanam',
+            'nama' => 'required',
+            'no_tlpn' => 'required',
+            'alamat' => 'required',
             'nama_tanam' => 'required',
             'harga' => 'required',
             'stok' => 'required',
@@ -88,6 +79,9 @@ class TanamController extends Controller
 
         $data = [
             'id_tanam' => $request->input('id_tanam'),
+            'nama' => $request->input('nama'),
+            'no_tlpn' => $request->input('no_tlpn'),
+            'alamat' => $request->input('alamat'),
             'nama_tanam' => $request->input('nama_tanam'),
             'kategori' => $request->input('kategori'),
             'harga' => $request->input('harga'),
@@ -95,15 +89,7 @@ class TanamController extends Controller
             'keterangan' => $request->input('keterangan'),
             'foto' => $foto_nama,
         ];
-        // $data =[
-        //     'id_tanam' => $request->id_tanam,
-        //     'nama_tanam' => $request->nama_tanam,
-        //     'kategori' => $request->kategori,
-        //     'harga' => $request->harga,
-        //     'stok' => $request->stok,
-        //     'keterangan' => $request->keterangan,
-        //     'foto' => $request->foto_nama,
-        // ];
+
 
         Tanaman::create($data);
         return redirect()->to('tanam')->with('success', 'Berhasil menambahkan data');
@@ -133,28 +119,13 @@ class TanamController extends Controller
         return view('tanam.edit')->with('data', $data);
     }
 
-    // /**
-    //  * Update the specified resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
     public function update(Request $request, $id)
     {
-        //     $request->validate([
-        //         'judul' => 'required',
-        //         'penulis' => 'required',
-        //         'category' => 'required',
 
-
-        //     ], [
-        //         'judul.required' => 'Judul wajib diisi',
-        //         'penulis.required' => 'Penulis wajib diisi',
-        //         'category.required' => 'Cataegory wajib diisi',
-
-        //     ]);
         $data = [
+            'nama' => $request->nama,
+            'no_tlpn' => $request->no_tlpn,
+            'alamat' => $request->alamat,
             'nama_tanam' => $request->nama_tanam,
             'kategori' => $request->kategori,
             'harga' => $request->harga,

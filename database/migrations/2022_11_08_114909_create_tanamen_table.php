@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('tanamen', function (Blueprint $table) {
             $table->integer('id_tanam');
-            $table->unique('id_tanam');
+            $table->primary('id_tanam');
+            $table->string('nama');
+            $table->integer('no_tlpn');
+            $table->string('alamat');
             $table->string('nama_tanam');
             $table->string('kategori');
             $table->integer('harga');
