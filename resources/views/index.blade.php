@@ -55,6 +55,16 @@
         </div>
     </div>
 
+@include('components.navbar')
+    <!-- Header-->
+    <!-- <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5" id="nazril">         
+            <div class="text-center text-success">
+                <h1 class="display-4 fw-bolder">Belanja Tanaman Di Sini</h1>
+                <p class="lead fw-normal text-success-50 mb-0">Cari Tanaman Yang Anda Inginkan</p>
+            </div>
+        </div>
+    </header> -->
     
     <section class="section">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">

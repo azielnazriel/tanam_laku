@@ -3,6 +3,8 @@
 @section('konten')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <div class="container">
+    @include('components.navbar')
+
     <div class="row">
         <div class="col-md-12 mt-2">
         </div>
@@ -35,9 +37,9 @@
                                 </tbody>
                                 
                             </table>
-                            <tr>
-                                <button type="submit" class="btn btn-primary mt-2 bi bi-chat-dots"> Chat</button>                                 
-                            </tr>
+                            <button type="submit" class="btn btn-primary bi bi-chat-dots"> Chat</button>                                
+                            <a href='{{url('')}}' class="btn btn-danger">Kembali</a>                             
+
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('id_tanam');
             $table->primary('id_tanam');
             $table->string('nama');
-            $table->integer('no_tlpn');
+            $table->string('no_tlpn');
             $table->string('alamat');
             $table->string('nama_tanam');
             $table->string('kategori');

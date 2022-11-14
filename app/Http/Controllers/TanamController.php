@@ -39,37 +39,37 @@ class TanamController extends Controller
      */
     public function store(Request $request)
     {
-        Session::flash('id_tanam', $request->id_tanam);
-        Session::flash('nama', $request->nama);
-        Session::flash('no_tlpn', $request->no_tlpn);
-        Session::flash('alamat', $request->alamat);
-        Session::flash('nama_tanam', $request->nama_tanam);
-        Session::flash('kategori', $request->kategori);
-        Session::flash('harga', $request->harga);
-        Session::flash('stok', $request->stok);
-        Session::flash('keterangan', $request->keterangan);
+        // Session::flash('id_tanam', $request->id_tanam);
+        // Session::flash('nama', $request->nama);
+        // Session::flash('no_tlpn', $request->no_tlpn);
+        // Session::flash('alamat', $request->alamat);
+        // Session::flash('nama_tanam', $request->nama_tanam);
+        // Session::flash('kategori', $request->kategori);
+        // Session::flash('harga', $request->harga);
+        // Session::flash('stok', $request->stok);
+        // Session::flash('keterangan', $request->keterangan);
 
-        $request->validate([
-            'id_tanam' => 'required|numeric|unique:tanamen,id_tanam',
-            'nama' => 'required',
-            'no_tlpn' => 'required',
-            'alamat' => 'required',
-            'nama_tanam' => 'required',
-            'harga' => 'required',
-            'stok' => 'required',
-            'keterangan' => 'required',
-            'foto' => 'image|file|max:10000'
-        ], [
-            'id_tanam.required' => ' Id wajib diisi',
-            'id_tanam.numeric' => 'Id wajib dalam angka',
-            'id_tanam.unique' => 'Id sudah ada dalam database',
-            'nama_tanam.required' => 'Nama wajib diisi',
-            'harga.required' => 'Harga wajib diisi',
-            'stok.required' => 'Stok wajib diisi',
-            'keterangan.required' => 'keterangan belum ada',
-            'foto.required' => 'Foto wajib diisi',
-            'foto.mimes' => 'Foto hanya diperbolehkan JPG',
-        ]);
+        // $request->validate([
+        //     'id_tanam' => 'required|numeric|unique:tanamen,id_tanam',
+        //     'nama' => 'required',
+        //     'no_tlpn' => 'required',
+        //     'alamat' => 'required',
+        //     'nama_tanam' => 'required',
+        //     'harga' => 'required',
+        //     'stok' => 'required',
+        //     'keterangan' => 'required',
+        //     'foto' => 'image|file|max:10000'
+        // ], [
+        //     'id_tanam.required' => ' Id wajib diisi',
+        //     'id_tanam.numeric' => 'Id wajib dalam angka',
+        //     'id_tanam.unique' => 'Id sudah ada dalam database',
+        //     'nama_tanam.required' => 'Nama wajib diisi',
+        //     'harga.required' => 'Harga wajib diisi',
+        //     'stok.required' => 'Stok wajib diisi',
+        //     'keterangan.required' => 'keterangan belum ada',
+        //     'foto.required' => 'Foto wajib diisi',
+        //     'foto.mimes' => 'Foto hanya diperbolehkan JPG',
+        // ]);
 
 
         $foto_file = $request->file('foto');
@@ -119,19 +119,25 @@ class TanamController extends Controller
         return view('tanam.edit')->with('data', $data);
     }
 
+    // /**
+    //  * Update the specified resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
     public function update(Request $request, $id)
     {
 
         $data = [
-            'nama' => $request->nama,
-            'no_tlpn' => $request->no_tlpn,
-            'alamat' => $request->alamat,
+                'nama' => $request->nama,
+                'no_tlpn' => $request->no_tlpn,
+                'alamat' => $request->alamat,
             'nama_tanam' => $request->nama_tanam,
             'kategori' => $request->kategori,
             'harga' => $request->harga,
             'stok' => $request->stok,
             'keterangan' => $request->keterangan,
-            'foto' => $request->foto,
         ];
         $tanam = Tanaman::where('id_tanam', $id)->first();
         $tanam->update($data); //menghilangkan variable yg tidak diinginkan

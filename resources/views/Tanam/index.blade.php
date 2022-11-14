@@ -1,9 +1,9 @@
 @extends('layout.template')
-
-
 @section('konten')
 <link href="/css/warna.css" rel="stylesheet" />
 <body>
+    @include('components.navbar')
+
 <div class="my-3 p-3 bg-body rounded shadow-sm">
     <!-- FORM PENCARIAN -->
     {{-- <div class="pb-3">
@@ -20,6 +20,9 @@
             <tr>
                 <th class="col-md-1 text-center">No</th>
                 <th class="col-md-1 text-center">id_tanam</th>
+                <th class="col-md-1 text-center">Nama Penjualan</th>
+                <th class="col-md-1 text-center">No Telpon</th>
+                <th class="col-md-1 text-center">Alamat</th>
                 <th class="col-md-1.5 text-center">Tanaman</th>
                 <th class="col-md-1 text-center">Kategori</th>
                 <th class="col-md-1 text-center">Harga</th>
@@ -35,6 +38,9 @@
                 {{-- <td>{{ $loop->iteration }}</td> --}}
                 <td>{{$i}}</td>
                 <td>{{ $item->id_tanam }}</td>
+                <td>{{ $item->nama }}</td>
+                <td>{{ $item->no_tlpn }}</td>
+                <td>{{ $item->alamat }}</td>
                 <td>{{ $item->nama_tanam }}</td>
                 <td>{{ $item->kategori }}</td>
                 <td>{{ $item->harga }}</td>
