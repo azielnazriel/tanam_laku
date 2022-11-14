@@ -115,9 +115,10 @@ class TanamController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_tanam)
     {
-        //    
+        $data = Tanaman::where('id_tanam', $id_tanam)->first();
+        return view('tanam.detail')->with('produk', $data);
     }
 
     /**
